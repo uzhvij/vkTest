@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //open web view to login to vk
-    private void loginToVkWithPermissions(){
+    private void loginToVkWithPermissions() {
         List<VKScope> permissionsList = new ArrayList<>();
         permissionsList.add(VKScope.FRIENDS);
         permissionsList.add(VKScope.PHONE);
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //need for vk developers site to creating your app
-    private void getAppFingerprint(){
+    private void getAppFingerprint() {
         String[] fingerprints = VKUtils.getCertificateFingerprint(this, this.getPackageName());
         assert fingerprints != null : "fingerprint is null";
         Log.d(App.TAG, fingerprints[0] + " " + fingerprints.length);
